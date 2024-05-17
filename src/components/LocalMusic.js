@@ -4,17 +4,17 @@ const musicTracks = [
   {
     title: 'Butet',
     // artist: 'Thania',
-    url: '/audio/butet.mp3'
+    url: 'https://raw.githubusercontent.com/dapss/visitnorthsumatra/master/public/audio/butet.mp3'
   },
   {
     title: 'Sinanggar Tulo',
     // artist: 'Artist 2',
-    url: '/audio/sinanggar.mp3'
+    url: 'https://raw.githubusercontent.com/dapss/visitnorthsumatra/master/public/audio/butet.mp3'
   },
   {
     title: 'Alusi Au',
     // artist: 'Artist 2',
-    url: '/audio/alusi.mp3'
+    url: 'https://raw.githubusercontent.com/dapss/visitnorthsumatra/master/public/audio/butet.mp3'
   },
 ];
 
