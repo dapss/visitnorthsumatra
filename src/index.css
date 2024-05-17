@@ -1,13 +1,484 @@
+/* Global Styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font-family: Arial, sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #5c5968;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Header Styles */
+.header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.header nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.header nav ul li {
+  margin-left: 20px;
+}
+
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section Styles */
+.hero-image {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 0px 50px black;
+}
+
+.carousel-caption h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+/* Destination Card Styles */
+.destination-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.destination-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  margin-bottom: 20px;
+  color: #5c5968;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  margin: 0 0 10px;
+}
+
+.card-text {
+  margin: 0;
+}
+
+/* Featured Destinations Styles */
+.featured-destinations {
+  padding: 50px 0;
+  color: #5c5968;
+}
+
+.featured-destinations h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.featured-destinations .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* About Section Styles */
+.about-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  color: #5c5968;
+}
+
+.about-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-section h3 {
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  line-height: 1.6;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-section form .btn {
+  background-color: #333;
+  color: #fff;
+}
+
+.contact-section form .btn:hover {
+  background-color: #555;
+}
+
+/* Footer Styles */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Weather Card Styles */
+.weather-section {
+  padding: 5px 0;
+  background-color: #e0f7fa;
+}
+
+.weather-section .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: auto;
+}
+
+.city-selector {
+  margin-bottom: 20px;
+}
+
+.city-selector label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.city-selector select {
+  padding: 5px;
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  overflow: hidden;
+  transition: 0.3s;
+  color: #5c5968;
+  /* box-shadow: 0 0 100px rgba(0, 0, 0, 0.2); */
+}
+
+.city-selector select:hover {
+  background-color: #f9f9f9;
+}
+
+.weather-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.weather-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-details .ml-3 {
+  margin-left: 15px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #5c5968;
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00796b;
+  text-align: left;
+}
+
+.feels-like,
+.description,
+.humidity,
+.pressure,
+.wind-speed {
+  margin: 0;
+  font-size: 1rem;
+  color: #004d40;
+  text-align: left;
+}
+
+/* Travel Tips Section Styles */
+.travel-tips-section {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+.travel-tips-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tip-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  color: #5c5968;
+}
+
+.tip-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Destination Card Styles */
+.destination-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  margin: 0 0 10px;
+}
+
+.card-text {
+  margin: 0;
+}
+
+.destination-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Developers Info Section Styles */
+.developers-info {
+  background-color: #fff;
+}
+
+.developer-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  color: #5c5968;
+}
+
+.developer-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.developer-card .card-body {
+  padding: 20px;
+}
+
+.developer-card .card-title {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.developer-card .card-text a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.developer-card .card-text a:hover {
+  text-decoration: underline;
+}
+
+/* Local Dishes Styles */
+.local-dishes {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.local-dishes h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.local-dishes .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Local Music Styles */
+.local-music .list-group-item {
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #5c5968;
+}
+
+.local-music .list-group-item h5 {
+  margin: 0;
+}
+
+.local-music .list-group-item p {
+  margin: 5px 0;
+}
+
+.local-music audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Local Dishes Card */
+.dishes-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.dishes-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  margin-bottom: 20px;
+  color: #5c5968;
+}
+
+.dishes-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  margin: 0 0 10px;
+}
+
+.card-text {
+  margin: 0;
+}
+
+/* Destination Page */
+.destination-page .header-image {
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.destination-page .destination-title {
+  font-size: 4rem;
+  margin: 0;
+  text-shadow: 0px 0px 50px black;
+}
+
+.destination-page .container {
+  padding: 20px;
+}
+
+.destination-page .destination-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.destination-page .highlights-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.destination-page .highlights-list li {
+  background: #f4f4f4;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.destination-page p {
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
