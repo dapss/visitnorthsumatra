@@ -25,6 +25,10 @@ body {
   margin: 0;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .navbar-brand {
   font-weight: bold;
 }
