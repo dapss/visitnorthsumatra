@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/visitnorthsumatra/static/css/main.e9ede2c4.css",
+    "main.js": "/visitnorthsumatra/static/js/main.90f55d2d.js",
+    "static/media/Montserrat-Bold.ttf": "/visitnorthsumatra/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
+    "static/media/Montserrat-Regular.ttf": "/visitnorthsumatra/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "index.html": "/visitnorthsumatra/index.html",
+    "main.e9ede2c4.css.map": "/visitnorthsumatra/static/css/main.e9ede2c4.css.map",
+    "main.90f55d2d.js.map": "/visitnorthsumatra/static/js/main.90f55d2d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9ede2c4.css",
+    "static/js/main.90f55d2d.js"
+  ]
+}
