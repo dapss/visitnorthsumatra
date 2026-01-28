@@ -11,7 +11,11 @@ const Weather = () => {
     const fetchWeather = async () => {
       try {
         const response = await axios.get('https://api.openweathermap.org/data/2.5/weather', {
-          params: { q: city, units: 'metric', appid: 'b9148fc5d58e28ecd27588fa07471a29' },
+          params: { 
+            q: city, 
+            units: 'metric', 
+            appid: process.env.REACT_APP_WEATHER_API_KEY 
+          },
         });
         setWeather(response.data);
       } catch (err) { console.error(err); }
@@ -23,6 +27,7 @@ const Weather = () => {
     <div className="container">
       <div className="weather-strip row align-items-center justify-content-center mx-3 mx-md-0">
         
+        {/* City Selector Section */}
         <div className="col-md-3 text-center mb-3 mb-md-0 border-right border-secondary">
           <span className="text-uppercase text-white-50 d-block text-small mb-2" style={{fontSize: '0.7rem', letterSpacing:'1px'}}>
             Select Location
@@ -35,7 +40,7 @@ const Weather = () => {
                     fontSize: '1.2rem', 
                     cursor: 'pointer',
                     appearance: 'none',
-                    paddingRight: '25px', 
+                    paddingRight: '25px',
                     background: 'transparent',
                     minWidth: '140px'
                 }}
@@ -59,6 +64,7 @@ const Weather = () => {
           </div>
         </div>
 
+        {/* Weather Display Section */}
         {weather ? (
           <>
             <div className="col-md-3 text-center d-flex align-items-center justify-content-center border-right border-secondary">
